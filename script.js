@@ -80,7 +80,7 @@ Array.from(document.getElementsByClassName("songitemplay")).forEach((element)=>{
         songindex = parseInt(e.target.id);
         e.target.classList.remove("fa-circle-play");
         e.target.classList.add("fa-circle-pause");
-        mysong.src='songs/'+songindex+'.mp3'
+        mysong.src=songindex+'.mp3'
         mastersongname.innerText = songslist[songindex-1].songname;
         mysong.currentTime=0;
         mysong.play();
