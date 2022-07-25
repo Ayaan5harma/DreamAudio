@@ -17,17 +17,17 @@
     }
 }); */
 let songindex=0;
-let mysong = new Audio("songs/1.mp3");
+let mysong = new Audio("1.mp3");
 let masterplay = document.getElementById("masterplay");
 let myseekbar = document.getElementById("myprogressbar");
 let mygif =document.getElementById("gif");
 let allsong = Array.from(document.getElementsByClassName('songitem'));
 let mastersongname = document.getElementById("mastersongname");
 let songslist =[
-    {songname:"kesariya",filepath:"songs/1.mp3",coverpath:"images/1.jpg"},
-    {songname:"kitni Haseen Hogi",filepath:"songs/2.mp3",coverpath:"images/2.jpg"},
-    {songname:"Rang Lageya",filepath:"songs/3.mp3",coverpath:"images/3.jpg"},
-    {songname:"phir Na Esi raat aayegi",filepath:"songs/4.mp3",coverpath:"images/4.jpg"},
+    {songname:"kesariya",filepath:"1.mp3",coverpath:"1.jpg"},
+    {songname:"kitni Haseen Hogi",filepath:"2.mp3",coverpath:"2.jpg"},
+    {songname:"Rang Lageya",filepath:"3.mp3",coverpath:"3.jpg"},
+    {songname:"phir Na Esi raat aayegi",filepath:"4.mp3",coverpath:"4.jpg"},
 ]
 
 allsong.forEach((element,i)=>{
@@ -100,7 +100,7 @@ document.getElementById('next').addEventListener('click', ()=>{
     else{
         songindex+=1;
     }
-    mysong.src='songs/'+songindex+'.mp3'
+    mysong.src=songindex+'.mp3'
     
     mysong.currentTime=0;
     mastersongname.innerText = songslist[songindex-1].songname;
@@ -120,7 +120,7 @@ document.getElementById('previous').addEventListener('click', ()=>{
     else{
         songindex-=1;
     }
-    mysong.src='songs/'+songindex+'.mp3'
+    mysong.src=songindex+'.mp3'
     mysong.currentTime=0;
     mastersongname.innerText = songslist[songindex-1].songname;
     mysong.play();
